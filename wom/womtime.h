@@ -122,13 +122,8 @@ namespace wom
 
 	void sleep(int wait)
 	{
-		std::clock_t startTime{ std::clock() };
-		double msElapsed{ 0.0 };
-
-		while (msElapsed < wait)
-		{
-			msElapsed = (std::clock() - startTime) / (double)(CLOCKS_PER_SEC / 1000);
-		}
+		timer t;
+		while (t.elapsed() < wait) {}
 	}
 }
 
