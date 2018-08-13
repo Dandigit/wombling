@@ -120,7 +120,7 @@ namespace wom
 		}
 	};
 
-	void sleep(int wait)
+	void sleep(unsigned int wait)
 	{
 		timer t;
 		while (t.elapsed() < wait) {}

@@ -3,7 +3,6 @@
 #include "../wom/womtime.h"
 #include "../wom/womio.h"
 
-
 int main()
 {
 	wom::timer t;
@@ -13,9 +12,7 @@ int main()
 	std::cout << "Oh - it's OK now.\n";
 	wom::resetColor();
 	std::cout << "Back to normal.\nExecuted in " << t.elapsed() << " milliseconds.\n";
-
-	wom::time currentTime;
-	std::cout << "The current time is " << currentTime << "\n";
+	std::cout << "The current time is " << wom::time{} << "\n";
 
 	t.restart();
 	wom::sleep(5327);
